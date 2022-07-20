@@ -63,8 +63,8 @@ export const DevelopersPage = () => {
           color="white"
           alignItems="center"
           _checked={{
-            bg: "#F4BF39",
-            color: "#434343",
+            bg: "#E39774",
+            color: "#FFF",
             fontWeight: "bold",
           }}
           _focus={{
@@ -85,16 +85,16 @@ export const DevelopersPage = () => {
   }
   return (
     <motion.div
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      exit={{opacity:0}}
-      transition={{duration:1}}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
     >
       <Flex className="fullPage" width="100%" minHeight="calc(100vh)">
         <VStack
           {...group}
           alignItems="flex-start"
-          backgroundColor={"#434343"}
+          backgroundColor={"#2B2D42"}
           display={["none", "none", "none", "none", "flex"]}
         >
           {options.map((value) => {
@@ -151,32 +151,43 @@ export const DevelopersPage = () => {
               mt={"170px"}
               direction={"column"}
             >
-              <Heading fontSize={"1.8rem"} color={"#111"} mt={"50px"} width={"100%"} textAlign={"center"}>
+              <Heading
+                fontSize={"1.8rem"}
+                color={"#111"}
+                mt={"50px"}
+                width={"100%"}
+                textAlign={"center"}
+              >
                 <Flex justify={"center"} align={"center"}>
-                  Developed with <Box m={"10px"}><GiBrainstorm /></Box> and <Box m={"10px"}><FaHeartbeat/></Box>, by:
+                  Developed with{" "}
+                  <Box m={"10px"}>
+                    <GiBrainstorm />
+                  </Box>{" "}
+                  and{" "}
+                  <Box m={"10px"}>
+                    <FaHeartbeat />
+                  </Box>
+                  , by:
                 </Flex>
               </Heading>
-              <Flex 
-                w="100%" 
-                align="center" 
-                justify="center">
-                <UnorderedList 
-                  w="100%" 
-                  maxW="1500px" 
-                  display="flex" 
-                  direction={"column"} 
-                  flexWrap={"wrap"} 
-                  justifyContent={"center"}>
-
-                  {devs.map((elem, index) => 
+              <Flex w="100%" align="center" justify="center">
+                <UnorderedList
+                  w="100%"
+                  maxW="1500px"
+                  display="flex"
+                  direction={"column"}
+                  flexWrap={"wrap"}
+                  justifyContent={"center"}
+                >
+                  {devs.map((elem, index) => (
                     <ListItem
                       _hover={{
-                        "transform": "scale(1.05)",
-                        "boxShadow":" 0px 20px 40px rgba(0, 0, 0, 0.25)",
-                        "border": "solid 1px #de9e36"
+                        transform: "scale(1.05)",
+                        boxShadow: " 0px 20px 40px rgba(0, 0, 0, 0.25)",
+                        border: "solid 1px #de9e36",
                       }}
                       listStyleType={"none"}
-                      transition= "all ease .5s"
+                      transition="all ease .5s"
                       w="300px"
                       h="507px"
                       border="1px solid #E5E5E5"
@@ -193,43 +204,48 @@ export const DevelopersPage = () => {
                         alt={elem.name}
                         borderRadius="10px 10px 0px 0px"
                       />
-                      <Text 
-                        fontWeight={"800"} 
-                        mt={"20px"} 
-                        fontSize={"1.5rem"} 
-                        textAlign={"center"} 
+                      <Text
+                        fontWeight={"800"}
+                        mt={"20px"}
+                        fontSize={"1.5rem"}
+                        textAlign={"center"}
                         color={"#111"}
                       >
                         {elem.name}
                       </Text>
-                      <Text 
-                        fontSize={"1.5rem"} 
-                        mt={"30px"} 
-                        textAlign={"center"} 
+                      <Text
+                        fontSize={"1.5rem"}
+                        mt={"30px"}
+                        textAlign={"center"}
                         color={"#111"}
                       >
                         {elem.position}
                       </Text>
-                      <Flex 
-                        mt={"50px"} 
-                        width={"300px"} 
-                        alignItems={"center"} 
-                        justify={"center"}>
-                      <Link 
-                        fontSize={"1.3rem"} 
-                        textAlign={"center"} 
-                        color={"#111"} 
-                        href={elem.contact} 
-                        isExternal
+                      <Flex
+                        mt={"50px"}
+                        width={"300px"}
+                        alignItems={"center"}
+                        justify={"center"}
                       >
-                        Portfólio 
-                      </Link>
-                        <AiFillGithub fontSize={"1.5rem"} color={"#111"} ml={"15px"} />
+                        <Link
+                          fontSize={"1.3rem"}
+                          textAlign={"center"}
+                          color={"#111"}
+                          href={elem.contact}
+                          isExternal
+                        >
+                          Portfólio
+                        </Link>
+                        <AiFillGithub
+                          fontSize={"1.5rem"}
+                          color={"#111"}
+                          ml={"15px"}
+                        />
                       </Flex>
-                    </ListItem>                  
-                  )}
+                    </ListItem>
+                  ))}
                 </UnorderedList>
-              </Flex>          
+              </Flex>
             </Flex>
           </Flex>
         </Flex>

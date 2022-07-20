@@ -47,8 +47,8 @@ export const DashboardPage = () => {
           alignItems="center"
           //   boxShadow="md"
           _checked={{
-            bg: "#F4BF39",
-            color: "#434343",
+            bg: "#E39774",
+            color: "#FFF",
             fontWeight: "bold",
           }}
           _focus={{
@@ -78,7 +78,7 @@ export const DashboardPage = () => {
         <VStack
           {...group}
           alignItems="flex-start"
-          backgroundColor={"#434343"}
+          backgroundColor={"#2B2D42"}
           display={["none", "none", "none", "none", "flex"]}
         >
           {options.map((value) => {
@@ -120,7 +120,7 @@ export const DashboardPage = () => {
             >
               <Flex w="100%" direction={"column"} align="center">
                 <Heading mt="40px" variant={"primary"}>
-                  Bem vindo, {userLogin.email}!
+                  Bem-vindo, admin!
                 </Heading>
                 <Flex mt="10px" w="100%" justify={"center"}>
                   <Text
