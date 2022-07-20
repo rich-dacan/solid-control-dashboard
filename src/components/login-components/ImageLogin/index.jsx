@@ -1,5 +1,5 @@
 import { Avatar, Flex, Text } from "@chakra-ui/react";
-import DEStoq from "../../../assets/image/solid_control_dark.png";
+import DEStoq from "../../../assets/image/solid_control_dark-removebg-preview.png";
 
 const ImageLogin = () => {
   return (
@@ -32,6 +32,8 @@ const ImageLogin = () => {
           top="200px"
           src={DEStoq}
           alt="logo da empresa"
+          borderRadius="10px"
+          bg="transparent"
         />
         <Text
           mr={"80px"}

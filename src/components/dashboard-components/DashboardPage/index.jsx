@@ -17,7 +17,7 @@ AOS.init();
 export const DashboardPage = () => {
   const { activeDashboardPage, setActiveDashboardPage, handleIcons, options } =
     useActivePage();
-  const userLogin = JSON.parse(localStorage.getItem("@DEStoq:user")) || "";
+  const userLogin = JSON.parse(localStorage.getItem("@SolidControl:admin")) || "";
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "menuOptions",
@@ -120,7 +120,7 @@ export const DashboardPage = () => {
             >
               <Flex w="100%" direction={"column"} align="center">
                 <Heading mt="40px" variant={"primary"}>
-                  Bem vindo, {userLogin.name}!
+                  Bem vindo, {userLogin.email}!
                 </Heading>
                 <Flex mt="10px" w="100%" justify={"center"}>
                   <Text
