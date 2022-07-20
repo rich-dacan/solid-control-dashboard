@@ -18,7 +18,7 @@ import {
   useRadioGroup,
   VStack,
 } from "@chakra-ui/react";
-import DEStoq from "../../assets/image/solid_control_light.png";
+import DEStoq from "../../assets/image/solid_control_dark-removebg-preview.png";
 import React, { useContext } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -117,7 +117,8 @@ const DashboardHeader = () => {
           </Button>
           <Image
             src={DEStoq}
-            width={["125px", "125px", "125px", "150px", "150px"]}
+            width={["80px", "80px", "80px", "80px", "80px"]}
+            h={["80px", "80px", "80px", "80px", "80px"]}
             alt="DEStoq logo"
           />
           <InputGroup

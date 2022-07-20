@@ -6,14 +6,13 @@ import {
   FormLabel,
   Heading,
   Input,
-  Text,
   useToast,
 } from "@chakra-ui/react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import api from "../../../dataBase/db";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const FormLogin = () => {
   const navigate = useNavigate();
@@ -24,6 +23,7 @@ const FormLogin = () => {
     api
       .post("admin/login", data)
       .then((res) => {
+        console.log(data);
         toast({
           description: "Logado com sucesso!",
           status: "success",
@@ -32,10 +32,10 @@ const FormLogin = () => {
           position: "top",
         });
         // localStorage.setItem(
-        //   "@DEStoq:token",
+        //   "@SolidControl:admin",
         //   JSON.stringify(res.data.accessToken)
         // );
-        // localStorage.setItem("@DEStoq:user", JSON.stringify(res.data.user));
+        localStorage.setItem("@SolidControl:admin", JSON.stringify(res.data));
 
         return navigate("/dashboard");
       })

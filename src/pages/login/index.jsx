@@ -1,7 +1,7 @@
 import { Avatar, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import FormLogin from "../../components/login-components/FormLogin";
-import DEStoq from "../../assets/image/DEStoq.png";
+import SolidLogo from "../../assets/image/solid_control_light-removebg-preview.png";
 import ImageLogin from "../../components/login-components/ImageLogin";
 
 const LoginPage = () => {
@@ -20,12 +20,14 @@ const LoginPage = () => {
         direction={["column", "column", "column", "column", "row-reverse"]}
       >
         <Avatar
-          w={["170px", "170px", "170px", "170px", "200px"]}
-          h={["160px", "160px", "160px", "160px", "200px"]}
+          w={["270px", "270px", "270px", "270px", "200px"]}
+          h={["250px", "250px", "250px", "260px", "250px"]}
           position="unset"
           top="100px"
-          src={DEStoq}
+          src={SolidLogo}
           alt="logo da empresa"
+          borderRadius="10px"
+          bg="transparent"
           display={[
             "inline-block",
             "inline-block",

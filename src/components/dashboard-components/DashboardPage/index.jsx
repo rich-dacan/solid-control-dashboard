@@ -17,7 +17,7 @@ AOS.init();
 export const DashboardPage = () => {
   const { activeDashboardPage, setActiveDashboardPage, handleIcons, options } =
     useActivePage();
-  const userLogin = JSON.parse(localStorage.getItem("@DEStoq:user")) || "";
+  const userLogin = JSON.parse(localStorage.getItem("@SolidControl:admin")) || "";
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "menuOptions",
