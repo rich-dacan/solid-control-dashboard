@@ -169,8 +169,8 @@ export const PedidosPage = () => {
           color="white"
           alignItems="center"
           _checked={{
-            bg: "#F4BF39",
-            color: "#434343",
+            bg: "#E39774",
+            color: "#FFF",
             fontWeight: "bold",
           }}
           _focus={{
@@ -200,7 +200,7 @@ export const PedidosPage = () => {
         <VStack
           {...group}
           alignItems="flex-start"
-          backgroundColor={"#434343"}
+          backgroundColor={"#2B2D42"}
           display={["none", "none", "none", "none", "flex"]}
         >
           {options.map((value) => {
@@ -446,10 +446,10 @@ export const PedidosPage = () => {
                               margin={"5px 0"}
                               colorScheme="blue"
                               onClick={() => {
-                                if ( ticketItemQuantity <= 0 ) {
+                                if (ticketItemQuantity <= 0) {
                                   setMinQty(true);
                                 } else {
-                                  setMinQty(false)
+                                  setMinQty(false);
                                   api
                                     .get(`products/${ticketItemId}`)
                                     .then((resp) => {
@@ -488,9 +488,12 @@ export const PedidosPage = () => {
                                   width={"15px"}
                                   height={"15px"}
                                   onClick={(e) => {
-                                  setTicketItensList(ticketItensList.filter((elem) => elem.id !== e.target.value) 
-                                    
-                                  )}}
+                                    setTicketItensList(
+                                      ticketItensList.filter(
+                                        (elem) => elem.id !== e.target.value
+                                      )
+                                    );
+                                  }}
                                 >
                                   x
                                 </Button>
