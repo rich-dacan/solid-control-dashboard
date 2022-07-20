@@ -175,8 +175,8 @@ export const ProdutosPage = () => {
           alignItems="center"
           //   boxShadow="md"
           _checked={{
-            bg: "#F4BF39",
-            color: "#434343",
+            bg: "#E39774",
+            color: "#FFF",
             fontWeight: "bold",
           }}
           _focus={{
@@ -207,7 +207,7 @@ export const ProdutosPage = () => {
         <VStack
           {...group}
           alignItems="flex-start"
-          backgroundColor={"#434343"}
+          backgroundColor={"#2B2D42"}
           display={["none", "none", "none", "none", "flex"]}
         >
           {options.map((value) => {

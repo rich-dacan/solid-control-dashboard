@@ -1,6 +1,6 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://destoq.herokuapp.com",
+  baseURL: "https://solid-control-api.herokuapp.com/",
 });
 export default api;

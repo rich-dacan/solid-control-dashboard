@@ -29,24 +29,24 @@ export const thema = extendTheme({
     Button: {
       variants: {
         primary: {
-          background: "#101010",
+          background: "#2B2D42",
           color: "white",
           margin: "10px",
           width: "300px",
           height: "43px",
           _hover: {
-            background: "#F4BF39",
-            color: "#101010",
+            background: "#E39774",
+            color: "#000",
           },
         },
         dashboard: {
-          background: "#434343",
+          background: "#FFF5F5",
           color: "white",
           margin: "10px",
           width: "122px",
           height: "75px",
           _hover: {
-            background: "#F4BF39",
+            background: "#E39774",
           },
         },
       },

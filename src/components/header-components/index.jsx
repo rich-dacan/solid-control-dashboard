@@ -68,8 +68,8 @@ const DashboardHeader = () => {
           color="white"
           alignItems="center"
           _checked={{
-            bg: "#F4BF39",
-            color: "#434343",
+            bg: "#E39774",
+            color: "#FFF",
             fontWeight: "bold",
           }}
           _focus={{
@@ -93,7 +93,7 @@ const DashboardHeader = () => {
       <Flex
         w="100%"
         h="80px"
-        backgroundColor="#101010"
+        backgroundColor={"#2B2D42"}
         alignItems="center"
         justifyContent="center"
         boxShadow={"0 0 5px black"}
@@ -110,7 +110,7 @@ const DashboardHeader = () => {
             ref={btnRef}
             colorScheme="teal"
             onClick={onOpen}
-            backgroundColor="#101010"
+            backgroundColor={"#2B2D42"}
             display={["flex", "flex", "flex", "flex", "none"]}
           >
             <HamburgerIcon w="45px" h="47px" />
@@ -154,20 +154,20 @@ const DashboardHeader = () => {
           </InputGroup>
           <Flex w={["35%", "35%", "20%", "13%"]} justify="space-around">
             <Button
-              backgroundColor="#101010"
+              backgroundColor={"#2B2D42"}
               display={"inline-block"}
               _hover={{
-                backgroundColor: "#F4BF39",
+                backgroundColor: "#E39774",
               }}
               onClick={() => navigate("/")}
             >
               <BsHouse fontSize={35} color="white" />
             </Button>
             <Button
-              backgroundColor="#101010"
+              backgroundColor={"#2B2D42"}
               display={"inline-block"}
               _hover={{
-                backgroundColor: "#F4BF39",
+                backgroundColor: "#E39774",
               }}
               onClick={() => handleLogOut()}
             >
@@ -183,7 +183,7 @@ const DashboardHeader = () => {
         finalFocusRef={btnRef}
       >
         <DrawerOverlay />
-        <DrawerContent backgroundColor="#434343">
+        <DrawerContent backgroundColor={"#2B2D42"}>
           <DrawerCloseButton color="white" />
           <DrawerHeader color="white" fontWeight="bold" fontSize="26px">
             MENU
@@ -208,8 +208,8 @@ const DashboardHeader = () => {
               width={"100%"}
               fontWeight={"bold"}
               fontSize={"22px"}
-              backgroundColor="#F4BF39"
-              color={"#434343"}
+              backgroundColor={"#2B2D42"}
+              color={"#FFF"}
               display={["flex", "flex", "flex", "flex", "none"]}
             >
               Logout <BsBoxArrowInRight />
