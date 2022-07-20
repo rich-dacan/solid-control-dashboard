@@ -27,14 +27,14 @@ export const CardCompras = ({ order, getOrdersList, setOrdersList, token }) => {
       borderRadius={"10px"}
       margin={"10px 0"}
       padding={"10px"}
-      boxShadow={"0 0 10px #424242"}
+      border="1px solid grey"
       backgroundColor={"#dfdfdf"}
       justifyContent={"space-between"}
       alignItems={"flex-start"}
       flexWrap={["wrap", "wrap", "wrap", "wrap", "wrap"]}
       color={"#000"}
       _hover={{
-        boxShadow: "0 0 15px #eeeeee",
+        boxShadow: "0 0 10px #424242",
         cursor: "pointer",
       }}
     >

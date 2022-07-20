@@ -32,13 +32,13 @@ export const CardInsumo = ({ supply }) => {
       borderRadius={"10px"}
       margin={"10px 0"}
       padding={"10px"}
-      boxShadow={"0 0 10px #424242"}
+      border="1px solid grey"
       backgroundColor={"#dfdfdf"}
       justifyContent={"space-between"}
       flexWrap={["wrap", "wrap", "wrap", "wrap", "nowrap"]}
       color={"#000"}
       _hover={{
-        boxShadow: "0 0 15px #eee",
+        boxShadow: "0 0 10px #424242",
         cursor: "pointer",
       }}
     >

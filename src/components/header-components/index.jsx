@@ -13,10 +13,12 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Tooltip,
   useDisclosure,
   useRadio,
   useRadioGroup,
   VStack,
+  WrapItem,
 } from "@chakra-ui/react";
 import DEStoq from "../../assets/image/solid_control_dark-removebg-preview.png";
 import React, { useContext } from "react";
@@ -26,7 +28,7 @@ import { BsBoxArrowInRight, BsHouse } from "react-icons/bs";
 
 import { useActivePage } from "../../Providers/DashboardPageController";
 import { GoSearch } from "react-icons/go";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DashFilterContext } from "../../Providers/DashboardFilter";
 
 const DashboardHeader = () => {
@@ -48,6 +50,10 @@ const DashboardHeader = () => {
   const handleLogOut = () => {
     localStorage.clear();
     navigate("/");
+  };
+
+  const handleMarketplace = () => {
+    return <a href="https://destoq-capstonem3.vercel.app/"></a>
   };
 
   function RadioCard(props) {
@@ -159,9 +165,13 @@ const DashboardHeader = () => {
               _hover={{
                 backgroundColor: "#F4BF39",
               }}
-              onClick={() => navigate("/")}
+              onClick={() => handleMarketplace}
             >
-              <BsHouse fontSize={35} color="white" />
+              <WrapItem>
+              <Tooltip label='Marketplace' fontSize='md' placement='bottom' hasArrow arrowSize={15}>
+                <BsHouse fontSize={35} color="white" />
+              </Tooltip>
+              </WrapItem>
             </Button>
             <Button
               backgroundColor="#101010"
@@ -169,9 +179,12 @@ const DashboardHeader = () => {
               _hover={{
                 backgroundColor: "#F4BF39",
               }}
-              onClick={() => handleLogOut()}
+              // onClick={() => handleLogOut()}
             >
-              <BsBoxArrowInRight fontSize={35} color="white" />
+              <a href="https://destoq-capstonem3.vercel.app/"></a>
+              <Tooltip label='Marketplace' fontSize='md' placement='bottom' hasArrow arrowSize={15}>
+                <BsBoxArrowInRight fontSize={35} color="white" />
+              </Tooltip>
             </Button>
           </Flex>
         </Flex>
