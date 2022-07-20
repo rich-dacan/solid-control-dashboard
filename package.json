@@ -1,0 +1,62 @@
+{
+  "name": "distoq-capstonem3",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/icons": "^1.1.7",
+    "@chakra-ui/react": "^2.0.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@fontsource/itim": "^4.5.8",
+    "@fontsource/nunito": "^4.5.8",
+    "@fontsource/rubik": "^4.5.9",
+    "@hookform/resolvers": "^2.8.8",
+    "@react-google-maps/api": "^2.10.3",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "aos": "^3.0.0-beta.6",
+    "axios": "^0.27.2",
+    "framer-motion": "4.1.17",
+    "google-map-react": "^2.1.10",
+    "jsonwebtoken": "^8.5.1",
+    "lottie-react": "^2.2.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-hook-form": "^7.31.1",
+    "react-icons": "^4.3.1",
+    "react-jwt": "^1.1.6",
+    "react-lottie": "^1.2.3",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.0.1",
+    "recharts": "^2.1.9",
+    "uuidv4": "^6.2.13",
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
