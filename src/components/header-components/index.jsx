@@ -152,7 +152,6 @@ const DashboardHeader = () => {
               <Button
                 h="1.75rem"
                 size="sm"
-                onClick={() => console.log("teste")}
               >
                 <GoSearch />
               </Button>
@@ -179,12 +178,9 @@ const DashboardHeader = () => {
               _hover={{
                 backgroundColor: "#E39774",
               }}
-              // onClick={() => handleLogOut()}
+              onClick={() => handleLogOut()}
             >
-              <a href="https://destoq-capstonem3.vercel.app/"></a>
-              <Tooltip label='Marketplace' fontSize='md' placement='bottom' hasArrow arrowSize={15}>
-                <BsBoxArrowInRight fontSize={35} color="white" />
-              </Tooltip>
+              <BsBoxArrowInRight fontSize={35} color="white" />
             </Button>
           </Flex>
         </Flex>

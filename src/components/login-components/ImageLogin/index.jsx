@@ -9,7 +9,7 @@ const ImageLogin = () => {
       flexDirection="column"
       justify="center"
       align="center"
-      background="#101010"
+      background="#2B2D42"
       backgroundImage={
         "https://www.jeronimoburger.com.br/img/home/banner-sobre-desk.png"
       }
@@ -24,10 +24,10 @@ const ImageLogin = () => {
         flexDirection={"column"}
       >
         <Avatar
-          w="200px"
-          h="200px"
+          w="500px"
+          h="500px"
           ml="-100px"
-          mt="150px"
+          // mt="150px"
           position="unset"
           top="200px"
           src={DEStoq}
@@ -36,13 +36,22 @@ const ImageLogin = () => {
           bg="transparent"
         />
         <Text
-          mr={"80px"}
+          mr={"100px"}
           mt={"50px"}
           color={"#ccc"}
           fontFamily={"rubik"}
-          fontSize={"1.5rem"}
+          fontSize={"1.2rem"}
         >
-          Descomplicando seu estoque!
+          Gerenciamento Sólido, 
+        </Text>
+        <Text
+          mr={"100px"}
+          mt={"0px"}
+          color={"#ccc"}
+          fontFamily={"rubik"}
+          fontSize={"1.2rem"}
+        >
+          Controle em suas mãos! 
         </Text>
       </Flex>
     </Flex>
