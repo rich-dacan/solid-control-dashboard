@@ -36,7 +36,7 @@ export const thema = extendTheme({
           height: "43px",
           _hover: {
             background: "#E39774",
-            color: "#000",
+            color: "#2B2D42",
           },
         },
         dashboard: {
@@ -47,6 +47,7 @@ export const thema = extendTheme({
           height: "75px",
           _hover: {
             background: "#E39774",
+            color: "#2B2D42",
           },
         },
       },
