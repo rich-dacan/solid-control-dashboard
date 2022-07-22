@@ -23,7 +23,6 @@ const FormLogin = () => {
     api
       .post("users/login", data)
       .then((res) => {
-        console.log(data);
         toast({
           description: "Logado com sucesso!",
           status: "success",
@@ -41,9 +40,9 @@ const FormLogin = () => {
       })
       .catch((err) => {
         toast({
-          description: "Ops! Algo deu errado",
+          description: "Erro ao logar, revise suas credenciais",
           status: "error",
-          duration: 1500,
+          duration: 2500,
           isClosable: true,
           position: "top",
         });

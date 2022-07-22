@@ -17,6 +17,7 @@ import {
   useDisclosure,
   useRadio,
   useRadioGroup,
+  useToast,
   VStack,
   WrapItem,
 } from "@chakra-ui/react";
@@ -28,7 +29,7 @@ import { BsBoxArrowInRight, BsHouse } from "react-icons/bs";
 
 import { useActivePage } from "../../Providers/DashboardPageController";
 import { GoSearch } from "react-icons/go";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { DashFilterContext } from "../../Providers/DashboardFilter";
 
 const DashboardHeader = () => {
@@ -47,13 +48,18 @@ const DashboardHeader = () => {
 
   const group = getRootProps();
 
+  const toast = useToast();
+
   const handleLogOut = () => {
     localStorage.clear();
+    toast({
+      description: "Sessão encerrada!",
+      status: "success",
+      duration: 1500,
+      isClosable: true,
+      position: "top",
+    });
     navigate("/");
-  };
-
-  const handleMarketplace = () => {
-    return <a href="https://destoq-capstonem3.vercel.app/"></a>
   };
 
   function RadioCard(props) {
@@ -164,7 +170,6 @@ const DashboardHeader = () => {
               _hover={{
                 backgroundColor: "#E39774",
               }}
-              onClick={() => handleMarketplace}
             >
               <WrapItem>
               <Tooltip label='Marketplace' fontSize='md' placement='bottom' hasArrow arrowSize={15}>
