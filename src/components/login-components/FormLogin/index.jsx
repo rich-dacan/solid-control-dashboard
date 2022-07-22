@@ -21,7 +21,7 @@ const FormLogin = () => {
 
   const handleSubmitForm = (data) => {
     api
-      .post("admin/login", data)
+      .post("users/login", data)
       .then((res) => {
         console.log(data);
         toast({
@@ -95,7 +95,7 @@ const FormLogin = () => {
             align="center"
             sx={{
               label: {
-                margin: "10px 10px",
+                margin: "20px 10px",
               },
               input: {
                 borderColor: "black",
@@ -123,6 +123,7 @@ const FormLogin = () => {
                 {errors.email.message}
               </FormHelperText>
             )}
+
             <FormLabel htmlFor="email">Senha </FormLabel>
             <Input
               variant="outline"
@@ -143,7 +144,6 @@ const FormLogin = () => {
             variant="primary"
             mt="50px"
           >
-            
             LOGAR
           </Button>
         </form>
