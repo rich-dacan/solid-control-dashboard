@@ -13,6 +13,7 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Link,
   Tooltip,
   useDisclosure,
   useRadio,
@@ -21,7 +22,7 @@ import {
   VStack,
   WrapItem,
 } from "@chakra-ui/react";
-import DEStoq from "../../assets/image/solid_control_dark-removebg-preview.png";
+import SolidControlLogo from "../../assets/image/newSolidControlLogo-removebg-preview.png";
 import React, { useContext } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { BsBoxArrowInRight, BsHouse } from "react-icons/bs";
@@ -129,10 +130,10 @@ const DashboardHeader = () => {
             <HamburgerIcon w="45px" h="47px" />
           </Button>
           <Image
-            src={DEStoq}
+            src={SolidControlLogo}
             width={["80px", "80px", "80px", "80px", "80px"]}
             h={["80px", "80px", "80px", "80px", "80px"]}
-            alt="DEStoq logo"
+            alt="SolidControlLogo logo"
           />
           <InputGroup
             size="md"
@@ -174,7 +175,15 @@ const DashboardHeader = () => {
             >
               <WrapItem>
               <Tooltip label='Marketplace' fontSize='md' placement='bottom' hasArrow arrowSize={15}>
-                <BsHouse fontSize={35} color="white" />
+                <Link
+                  fontSize={"1.3rem"}
+                  textAlign={"center"}
+                  color={"#111"}
+                  href={"https://marketplace-solid.vercel.app/"} 
+                  isExternal
+                >
+                  <BsHouse fontSize={35} color="white" />
+                </Link>
               </Tooltip>
               </WrapItem>
             </Button>
