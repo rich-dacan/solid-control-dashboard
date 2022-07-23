@@ -4,7 +4,6 @@ import { SelectValuesProvider } from "./SelectValues";
 import { DashboardPageControllerProvider } from "./DashboardPageController";
 import { IsLoggedProvider } from "./isLogged";
 import { ShowcaseProvider } from "./showcase";
-import { CartProvider } from "./cart";
 import { ProvidersListProvider } from "./ProvidersList";
 import { StockProvider } from "./Stock";
 import { DashFilterProvider } from "./DashboardFilter";
@@ -14,27 +13,28 @@ const Providers = ({ children }) => {
   return (
     <TokenProvider>
       <UserProvider>
-        <DashFilterProvider>
-          <DashboardPageControllerProvider>
-            <StockProvider>
-              <ProvidersListProvider>
-                <ShowcaseProvider>
-                  <IsLoggedProvider>
-                    <CartProvider>
-                      <SearchHomeProvider>
-                        <SelectValuesProvider>
-                          {children}
-                        </SelectValuesProvider>
-                      </SearchHomeProvider>
-                    </CartProvider>
-                  </IsLoggedProvider>
-                </ShowcaseProvider>
-              </ProvidersListProvider>
-            </StockProvider>
-          </DashboardPageControllerProvider>
-        </DashFilterProvider>
+        <StockProvider>
+          <ShowcaseProvider>
+            <IsLoggedProvider>
+              <DashFilterProvider>
+                <SearchHomeProvider>
+                  <SelectValuesProvider>
+                    <ProvidersListProvider>
+                      <DashboardPageControllerProvider>
+
+                        {children}
+
+                      </DashboardPageControllerProvider>  
+                    </ProvidersListProvider>    
+                  </SelectValuesProvider>
+                </SearchHomeProvider>
+              </DashFilterProvider> 
+            </IsLoggedProvider>
+          </ShowcaseProvider>
+        </StockProvider>
       </UserProvider>
     </TokenProvider>
   );
 };
+
 export default Providers;

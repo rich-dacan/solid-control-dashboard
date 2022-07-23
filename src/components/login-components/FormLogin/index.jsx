@@ -23,6 +23,7 @@ const FormLogin = () => {
     api
       .post("users/login", data)
       .then((res) => {
+
         toast({
           description: "Logado com sucesso!",
           status: "success",
@@ -30,11 +31,11 @@ const FormLogin = () => {
           isClosable: true,
           position: "top",
         });
-        // localStorage.setItem(
-        //   "@SolidControl:admin",
-        //   JSON.stringify(res.data.accessToken)
-        // );
-        localStorage.setItem("@SolidControl:admin", JSON.stringify(res.data));
+
+        localStorage.setItem(
+          "@SolidControl:admin", 
+          JSON.stringify(res.data)
+        );
 
         return navigate("/dashboard");
       })
@@ -54,13 +55,11 @@ const FormLogin = () => {
       .string()
       .email("digite um e-mail válido")
       .required("E-mail obrigatório!"),
-    password: yup.string().required("Senha obrigatória!"),
-    // .matches(
-    //   /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])[0-9a-zA-Z$*&@#]{8,}$/,
-    //   "Senha Inválida. Sua senha deve conter pelo menos: uma letra Maiuscula, um número e um caracter especial($*&@#)"
-    // )
-    // .min(8, "Sua senha deve possuir no minimo 6 caracteres"),
+    password: yup
+      .string()
+      .required("Senha obrigatória!"),
   });
+  
   const {
     register,
     handleSubmit,
@@ -109,7 +108,7 @@ const FormLogin = () => {
               },
             }}
           >
-            <FormLabel htmlFor="email">E-mail </FormLabel>
+            <FormLabel htmlFor="email"> E-mail </FormLabel>
             <Input
               variant="outline"
               id="email"
@@ -123,7 +122,7 @@ const FormLogin = () => {
               </FormHelperText>
             )}
 
-            <FormLabel htmlFor="email">Senha </FormLabel>
+            <FormLabel htmlFor="email"> Senha </FormLabel>
             <Input
               variant="outline"
               id="password"

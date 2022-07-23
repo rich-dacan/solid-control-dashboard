@@ -1,5 +1,5 @@
 import { Avatar, Flex, Text } from "@chakra-ui/react";
-import DEStoq from "../../../assets/image/solid_control_dark-removebg-preview.png";
+import LogoLogin from "../../../assets/image/newSolidControlLogo-removebg-preview.png";
 
 const ImageLogin = () => {
   return (
@@ -15,7 +15,7 @@ const ImageLogin = () => {
       }
       bgRepeat="no-repeat"
       backgroundSize="100% 90%"
-      display={["none", "none", "none", "none", "flex"]}
+      display={["none", "none", "none", "flex", "flex"]}
     >
       <Flex
         ml={"50px"}
@@ -24,32 +24,27 @@ const ImageLogin = () => {
         flexDirection={"column"}
       >
         <Avatar
-          w="500px"
-          h="500px"
-          ml="-100px"
-          // mt="150px"
+          w={["none", "none", "none", "350px", "500px"]}
+          h={["none", "none", "none", "350px", "500px"]}
           position="unset"
           top="200px"
-          src={DEStoq}
-          alt="logo da empresa"
+          src={LogoLogin}
+          alt="logo__solid__control"
           borderRadius="10px"
           bg="transparent"
         />
         <Text
-          mr={"100px"}
           mt={"50px"}
           color={"#ccc"}
-          fontFamily={"rubik"}
-          fontSize={"1.2rem"}
+          fontFamily={"Ubuntu"}
+          fontSize={"1.5rem"}
         >
           Gerenciamento Sólido, 
         </Text>
         <Text
-          mr={"100px"}
-          mt={"0px"}
           color={"#ccc"}
-          fontFamily={"rubik"}
-          fontSize={"1.2rem"}
+          fontFamily={"Ubuntu"}
+          fontSize={"1.5rem"}
         >
           Controle em suas mãos! 
         </Text>
@@ -57,4 +52,5 @@ const ImageLogin = () => {
     </Flex>
   );
 };
+
 export default ImageLogin;

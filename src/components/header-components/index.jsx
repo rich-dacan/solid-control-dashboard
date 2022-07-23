@@ -24,21 +24,22 @@ import {
 import DEStoq from "../../assets/image/solid_control_dark-removebg-preview.png";
 import React, { useContext } from "react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
 import { BsBoxArrowInRight, BsHouse } from "react-icons/bs";
-
 import { useActivePage } from "../../Providers/DashboardPageController";
 import { GoSearch } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import { DashFilterContext } from "../../Providers/DashboardFilter";
 
 const DashboardHeader = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const btnRef = React.useRef();
-  const navigate = useNavigate();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const { inputSearch, setInputSearch } = useContext(DashFilterContext);
   const { activeDashboardPage, setActiveDashboardPage, handleIcons, options } =
-    useActivePage();
+  useActivePage();
+  
+  const navigate = useNavigate();
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "menuOptions",

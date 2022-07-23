@@ -1,7 +1,7 @@
-import { Avatar, Flex } from "@chakra-ui/react";
+import { Avatar, Flex, Image } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import FormLogin from "../../components/login-components/FormLogin";
-import SolidLogo from "../../assets/image/solid_control_light-removebg-preview.png";
+import SolidLogo from "../../assets/image/newSolidControlLogo-removebg-preview.png";
 import ImageLogin from "../../components/login-components/ImageLogin";
 
 const LoginPage = () => {
@@ -17,22 +17,22 @@ const LoginPage = () => {
         h="100vh"
         justify="center"
         align="center"
-        direction={["column", "column", "column", "column", "row-reverse"]}
+        direction={["column", "column", "column", "row-reverse", "row-reverse"]}
       >
-        <Avatar
-          w={["270px", "270px", "270px", "270px", "200px"]}
-          h={["250px", "250px", "250px", "260px", "250px"]}
+        <Image
+          w={["290px", "290px", "290px", "290px", "200px"]}
+          h={["270px", "270px", "270px", "270px", "270px"]}
+          p="10px"
           position="unset"
-          top="100px"
           src={SolidLogo}
           alt="logo da empresa"
-          borderRadius="10px"
-          bg="transparent"
+          borderRadius="50px"
+          bg="#2B2D42"
           display={[
             "inline-block",
             "inline-block",
             "inline-block",
-            "inline-block",
+            "none",
             "none",
           ]}
         />
